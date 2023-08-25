@@ -41,7 +41,7 @@ PerlPreProcessor::process(
    if (!ifile) {
       ostringstream msg;
       msg << "Input file " << a_input_file_name << " could not be opened!";
-      LOKI_ABORT(msg);
+      LOKI_ABORT(msg.str());
    }
 
    // The processed output file is named the same as the input but with
@@ -55,7 +55,7 @@ PerlPreProcessor::process(
       if (!ofile) {
          ostringstream msg;
          msg << "Output file " << output_file_name << " could not be opened!";
-         LOKI_ABORT(msg);
+         LOKI_ABORT(msg.str());
       }
 
       // Read and process each line of the input file until the end of file is

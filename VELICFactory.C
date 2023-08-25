@@ -42,7 +42,7 @@ VELICFactory::create(
          ostringstream error_msg;
          error_msg << "Unknown transverse drift velocity initial condition \""
                    << name << "\" ... quitting";
-         LOKI_ABORT(error_msg);
+         LOKI_ABORT(error_msg.str());
       }
    }
 

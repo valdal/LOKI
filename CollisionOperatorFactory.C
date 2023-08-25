@@ -51,7 +51,7 @@ CollisionOperatorFactory::create(
          ostringstream error_msg;
          error_msg << "Unknown collision operator \"" << name
                    << "\" ... quitting";
-         LOKI_ABORT(error_msg);
+         LOKI_ABORT(error_msg.str());
       }
    }
    return coll_op;

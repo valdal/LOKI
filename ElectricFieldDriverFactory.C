@@ -48,7 +48,7 @@ ElectricFieldDriverFactory::create(
          ostringstream error_msg;
          error_msg << "Unknown external electric field \"" << name
                    << "\" ... quitting";
-         LOKI_ABORT(error_msg);
+         LOKI_ABORT(error_msg.str());
       }
    }
    return driver;

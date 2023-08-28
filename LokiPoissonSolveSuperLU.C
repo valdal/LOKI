@@ -623,7 +623,7 @@ LokiPoissonSolveSuperLU::createLinearSystemContext()
 {
    // Create linear solver context.
    KSPCreate(PETSC_COMM_WORLD, &m_ksp);
-   KSPSetOperators(m_ksp, m_A, m_A, DIFFERENT_NONZERO_PATTERN);
+   KSPSetOperators(m_ksp, m_A, m_A);
 
    // Specify SuperLU solver.
    KSPSetType(m_ksp, KSPPREONLY);
